@@ -40,7 +40,6 @@ app.post('/provision-enterprise', async (req, res) => {
   const organizations = await workos.portal.listOrganizations({
     domains: organizationDomains,
   });
-
   if (organizations.data.length === 0) {
     global.organization = await workos.portal.createOrganization({
       name: organizationName,
@@ -61,7 +60,7 @@ app.get('/admin-portal', async (_req, res) => {
     organization: organization.id,
     intent: 'sso',
   });
-
+  console.log(organization.id);
   res.redirect(link);
 });
 

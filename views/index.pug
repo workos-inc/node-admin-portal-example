@@ -8,21 +8,14 @@ block layout-content
           p.text-danger Error!!!
       - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
         h1(class=h1Classes) Admin Portal Example Application
+        h5(class=h5Classes) For whom would you like to configure SSO?
       div(data-role='fieldcontain')
         fieldset(data-role='controlgroup')
           label(for='email')
             input(id='inputEmail',class="form-control",type='email',value='',placeholder='Email Address',name='email' required autofocus)
-            p.lead.text-muted Text prior to @ will be your organization name
-            p.lead.text-muted Text following @ will be your domain
+            p.lead.text-muted Text prior to @ will be the organization name
+            p.lead.text-muted Text following @ will be the domain
 
-      div#passworddiv(data-role='fieldcontain')
-        fieldset(data-role='controlgroup')
-          label(for='password')
-            input(id='inputPassword',type='password',value='',placeholder='Password',name='password', class="form-control" required)
-      div(id='hiddendiv',data-role='fieldcontain')
-        fieldset(data-role='controlgroup')
-          label(for='password')
-            input(id='inputPassword',type='password',value='',placeholder='Confirm Password',name='password2', class="form-control" required)
       div(data-role='fieldcontain')
         - var buttonClass=['btn', 'btn-md', 'btn-primary', 'btn-block'];
-          button(class=buttonClass type="submit") Enable SSO
+          button(class=buttonClass type="submit") Configure SSO
