@@ -30,6 +30,6 @@ WORKOS_PROJECT_ID=your_project_id_here
 npm start
 ```
 
-Head to `http://localhost:8000/` to navigate your directories!
+Head to `http://localhost:8000/` to begin!
 
 For more information, see the [WorkOS Node SDK documentation](https://docs.workos.com/sdk/node).
