@@ -13,7 +13,7 @@ git clone git@github.com:workos-inc/node-admin-portal-example.git && cd node-adm
 ## Configure your environment
 
 1. Grab your [API Key](https://dashboard.workos.com/api-keys).
-2. Get your [Project ID](https://dashboard.workos.com/sso/configuration).
+2. Get your [Project ID](https://dashboard.workos.com/configuration).
 3. Create a `.env` file at the root of the project and populate with the
 following environment variables (using values found above):
 
@@ -22,7 +22,7 @@ WORKOS_API_KEY=your_api_key_here
 WORKOS_PROJECT_ID=your_project_id_here
 ```
 
-4. Set your [Default Redirect Link](https://dashboard.workos.com/admin-portal).
+4. Set your [Default Redirect Link](https://dashboard.workos.com/configuration).
 
 ## Run the server and log in using SSO
 
