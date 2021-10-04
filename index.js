@@ -1,6 +1,4 @@
-/**
- * External Modules
- */
+// External Modules
 const express = require("express");
 const path = require("path");
 const WorkOS = require('@workos-inc/node').default;
@@ -12,14 +10,11 @@ var cookieParser = require('cookie-parser');
 var parser = require('tld-extract');
 
 // App Variables
-
 const app = express();
 const port = "8000";
 const workos = new WorkOS(process.env.WORKOS_API_KEY);
 
-
 //App Configuration
-
  app.set("views", path.join(__dirname, "views"));
  app.engine('html', require('ejs').renderFile);
  app.set("view engine", "ejs");
@@ -32,9 +27,9 @@ const workos = new WorkOS(process.env.WORKOS_API_KEY);
  app.use(cookieParser());
  app.use(express.static(path.join(__dirname)));
 
-/**
- * Route Definitions
- */
+
+
+// Route Definitions
  app.get("/", async (req, res) => {
   res.render("index.ejs", {
       title: "Home",
@@ -64,8 +59,6 @@ app.post('/provision-enterprise', async (req, res) => {
   }
 });
 
-
-
 app.get('/sso-admin-portal', async (_req, res) => {
   const organizationID =  organization.id;
 
@@ -90,9 +83,8 @@ app.get('/dsync-admin-portal', async (_req, res) => {
   res.redirect(link);
 });
 
-/**
- * Server Activation
- */
+
+// Server Activation
 app.listen(port, () => {
   console.log(`Listening to requests on http://localhost:${port}`);
 });
